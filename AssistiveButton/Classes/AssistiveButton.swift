@@ -9,12 +9,12 @@
 import Foundation
 
 //MARK: AssistiveButton
-public class AssistiveButton: UIButton {
+open class AssistiveButton: UIButton {
     
     //MARK: Public Var
-    public var moveEnable = true
+    open var moveEnable = true
     
-    public var didTap: (()->())?
+    open var didTap: (()->())?
     
     //MARK: Init
     public init(frame: CGRect,normalImage:UIImage,highlightedImage:UIImage? = nil) {
@@ -32,7 +32,7 @@ public class AssistiveButton: UIButton {
     }
     
     //MARK: Action
-    @objc private func tap() {
+    @objc fileprivate func tap() {
         if self.didMoved {
             return
         }
@@ -42,7 +42,7 @@ public class AssistiveButton: UIButton {
     
     
     //MARK: Override
-    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.didMoved = false
         
         super.touchesBegan(touches, with: event)
@@ -55,7 +55,7 @@ public class AssistiveButton: UIButton {
         self.beginPoint = touch.location(in: self)
     }
     
-    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.didMoved = false
         
         guard self.moveEnable == true else {
@@ -102,7 +102,7 @@ public class AssistiveButton: UIButton {
         }
     }
     
-    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         guard self.moveEnable == true else {
             return
@@ -130,12 +130,12 @@ public class AssistiveButton: UIButton {
         super.touchesEnded(touches, with: event)
     }
     
-    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
     }
     
     //MARK: Private Var
-    private var beginPoint = CGPoint.zero
+    fileprivate var beginPoint = CGPoint.zero
     
-    private var didMoved = false
+    fileprivate var didMoved = false
 }
