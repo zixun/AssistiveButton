@@ -1,9 +1,9 @@
 {
   "name": "AssistiveButton",
-  "version": "0.1.0",
-  "summary": "A short description of AssistiveButton.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/AssistiveButton",
+  "version": "1.1.2",
+  "summary": "Simple Assistive Button.",
+  "description": "Simple Assistive Button imitate the iOS system AssistiveTouch.",
+  "homepage": "https://github.com/zixun/AssistiveButton",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "zixun": "chenyl.exe@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/AssistiveButton.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/zixun/AssistiveButton.git",
+    "tag": "1.1.2"
   },
   "platforms": {
     "ios": "8.0"
